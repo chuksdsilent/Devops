@@ -79,9 +79,6 @@ In this project I will be creating a continuous delivery of java application to 
      - Sonarqube (80 from my ip, 80 from jenkins sg, 9000)
 4. Launch ec2 instances for
 
-   - Jenkins(Ubuntu)
-     - Login into jenkins and cat the url to the password
-     - complete installation
    - Nexus(centos7)
 
      - Click on signin
@@ -107,10 +104,35 @@ In this project I will be creating a continuous delivery of java application to 
            - maven 2 group
            - create repository
            - Type the name
+           - maven snapshot
+           - create repository
+           - Type the name
+           - Change releast to snapshot
+           - create
            - Under Available move the following
              - vpro-maven-central
              - maven-releases
+             - vprofile-snapshot
            - create
+       - Go to settings.xml which is located in .m2
+
+   - Jenkins(Ubuntu)
+
+     - Login into jenkins and cat the url to the password
+     - complete installation
+     - create a jenkins jo
+       - type the nme
+       - select freestyle
+       - ok
+       - under source code management
+         - select git
+         - enter the url
+         - enter the branch (ci-jenkins)
+         - Add build step >> Invoke top-level Maven targets
+         - Goals (install -DskipTests)
+         - settings file
+           - Settings file in filesystem
+           - file path (settings.xml)
 
    - Sonarqube (ubuntu)
    - for setup go to ci-jenkins on vprofile projects and copy the userdata setup
