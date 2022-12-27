@@ -66,3 +66,51 @@ In this project I will be creating a continuous delivery of java application to 
 * Create jo to run software tests(selenium) from windows server
 * connect all jos with Build Pipeline
 * Test it by committing the code to github
+
+## STEPS
+
+1. Login to aws
+2. Go to keypairs
+   - Create a key pair
+3. Go to security group
+   - create 3 security group
+     - Jenkins (8080, 22 from my ip, all traffic from sonarqube )
+     - Nexus (8081, 22 from my ip, allow 8081 from jenkins sg)
+     - Sonarqube (80 from my ip, 80 from jenkins sg, 9000)
+4. Launch ec2 instances for
+
+   - Jenkins(Ubuntu)
+     - Login into jenkins and cat the url to the password
+     - complete installation
+   - Nexus(centos7)
+
+     - Click on signin
+     - enter username(admin) and password
+       - ssh into nexus server
+       - cat the url to get the password
+       - paste the new password
+       - next
+       - set a new password
+       - enable anonymous access
+       - create
+         - Setting >> repository
+         - create 3 repositories
+           - maven hosted zone
+           - create repository
+           - Type the name
+           - create
+           - maven 2 proxy
+           - create repository
+           - Type the name
+           - Enter the maven repo url(https://repo1.maven.org/maven2/)
+           - create
+           - maven 2 group
+           - create repository
+           - Type the name
+           - Under Available move the following
+             - vpro-maven-central
+             - maven-releases
+           - create
+
+   - Sonarqube (ubuntu)
+   - for setup go to ci-jenkins on vprofile projects and copy the userdata setup
