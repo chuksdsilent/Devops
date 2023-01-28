@@ -7,3 +7,23 @@
 7. Select pem for git bash and ppk for putty
 8. Type key name and download the key then save
 9. Clone the vprofile project from https://github.com/chuksdsilent/vprofile-project.git
+10. change to lift and shift directory (git checkout aws-LiftAndShift)
+    11 Change directory to userdata
+11. Go to ec2 instance and launch instance
+
+- Provision mysql instance(Ubuntu)
+  - Select t2 micro
+  - Select the exist backend security group
+  - Copy mysql userdata bash script and past in the userdata box
+  - Launch Instance
+  - Login to the instance and check if database is created
+- Provision memcache instance(Centos)
+  - Select t2 micro
+  - Select the exist backend security group
+  - Copy memcache userdata bash script and past in the userdata box
+  - Launch Instance
+- Provision rabbitmq instance(Centos)
+  - Select t2 micro
+  - Select the exist backend security group
+  - Copy rabbitmq userdata bash script and past in the userdata box
+  - Launch Instance
