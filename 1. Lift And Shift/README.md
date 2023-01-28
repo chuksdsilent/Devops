@@ -32,19 +32,6 @@ This project moves application that runs on premise to cloud
 - Map ELB Endpoint to website name in whogohost
 - Autoscaling group for ec2 instances
 
-### STEPS
-
-1. Login to AWS
-2. Go to ec2
-3. Go to security groups
-   - Create a security group for load balancer(Allow port 80 and 443)
-   - Create security group for Tomcat instance(Allow traffic from load balancer and open port 8081)
-   - Create security group for Backend Services(Allow traffic from tomcat open port 3306 for mysql, 11211 for memcache, 5672 from rabbitmq, allow traffic from its security id so it can interact with itself)
-4. Go to keypair
-   - Select pem for git bash and ppk for putty
-   - Type key name and download the key then save
-5. Clone the vprofile project from
-
 6. Change Directory to vprofile project/userdata which contains a lot of bash scripts
 
 7. Go to ec2 instance and launch instance
