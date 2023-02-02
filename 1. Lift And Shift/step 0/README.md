@@ -29,20 +29,60 @@
 9. Clone the vprofile project from https://github.com/chuksdsilent/vprofile-project.git<br />
 10. change to lift and shift directory (git checkout aws-LiftAndShift)<br />
     11 Change directory to userdata<br />
+
 11. Go to ec2 instance and launch instance
+
     - Provision mysql instance(Ubuntu)
       - Select t2 micro
       - Select the exist backend security group
       - Copy mysql userdata bash script and past in the userdata box
       - Launch Instance<br />
       - Login to the instance and check if database is created
-      - Provision memcache instance(Centos)<br />
+    - Provision memcache instance(Centos)<br />
       - Select t2 micro
       - Select the exist backend security group
       - Copy memcache userdata bash script and past in the userdata box
       - Launch Instance<br />
-      - Provision rabbitmq instance(Centos)
+    - Provision rabbitmq instance(Centos)
       - Select t2 micro
       - Select the exist backend security group
       - Copy rabbitmq userdata bash script and past in the userdata box
       - Launch Instance<br /><br />
+
+12. Login as the root user (sudo -i)
+
+13. To see the user-data
+
+    ```
+    curl http://169.254.169.254/latest/user-data
+    ```
+
+14. To check if mysql is provisioned
+
+    ```
+    systemctl status mysql
+    ```
+
+15. To check the processes running
+
+    ```
+    ps -ef
+    ```
+
+16. login to the database
+
+```
+mysql -u root -p and enter then enter password)
+```
+
+17. To switch to database
+
+```
+use database-name(accounts);
+```
+
+18. To view tables
+
+```
+show tables;
+```
