@@ -32,26 +32,6 @@ This project moves application that runs on premise to cloud
 - Map ELB Endpoint to website name in whogohost
 - Autoscaling group for ec2 instances
 
-6. Change Directory to vprofile project/userdata which contains a lot of bash scripts
-
-7. Go to ec2 instance and launch instance
-   - Provision mysql instance(Ubuntu)
-     - Select t2 micro
-     - Select the exist backend security group
-     - Copy mysql userdata bash script and past in the userdata box
-     - Launch Instance
-     - Login to the instance and check if database is created
-   - Provision memcache instance(Centos)
-     - Select t2 micro
-     - Select the exist backend security group
-     - Copy memcache userdata bash script and past in the userdata box
-     - Launch Instance
-   - Provision rabbitmq instance(Centos)
-     - Select t2 micro
-     - Select the exist backend security group
-     - Copy rabbitmq userdata bash script and past in the userdata box
-     - Launch Instance
-8. Note the backend service private IP address
 9. Go to Route53
    - Create a hosted zone
      - Type in domain name(sam.org)
