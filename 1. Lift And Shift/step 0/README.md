@@ -49,7 +49,11 @@
       - Copy rabbitmq userdata bash script and past in the userdata box
       - Launch Instance<br /><br />
 
-12. Login as the root user (sudo -i)
+12. Login as the root user
+
+```
+sudo -i
+```
 
 13. To see the user-data
 
@@ -60,7 +64,7 @@
 14. To check if mysql is provisioned
 
     ```
-    systemctl status mysql
+    systemctl status mariadb
     ```
 
 15. To check the processes running
@@ -85,4 +89,26 @@ use database-name(accounts);
 
 ```
 show tables;
+```
+
+### To validate memcache
+
+1. login to memcache instance
+
+```
+ systemctl status memcatched
+```
+
+2.  To check if it is running on the right port
+
+```
+ss -tunpl | grep 11211
+```
+
+### To validate RabitMQ
+
+1.  Login to rabbitMQ instance <br />
+
+```
+ systemctl status rabbitmq-server
 ```
