@@ -100,3 +100,62 @@ aws s3 ls s3://bucket-name
 7. Go to actions >> instance settings >> modify IAM Role
 8. select the role and update
 9. Login to app01
+   10 To check tomcat status
+
+```
+systemctl status tomcat8
+```
+
+11. To
+
+```
+cd /var/lib/tomcat8/webapps && ls
+```
+
+12. Stop tomcat service
+
+```
+sudo systemctl stop tomcat8
+```
+
+13. delete the root directory
+
+```
+sudo rm -rf ROOT
+```
+
+14. Install AWS cli
+
+```
+sudo apt install awscli -y
+```
+
+17. Download the File from s3 to tomcat(app01) server
+
+```
+aws s3 cp s3://vprofile-sam-artifact-storage/vprofile-v2.war /tmp
+```
+
+18. Copy The file to tomcat8
+
+```
+sudo cp vprofile-v2.war /var/lib/tomcat8/webapps/ROOT.war
+```
+
+19. Start the tomcat service
+
+```
+sudo systemctl start tomcat8
+```
+
+20 change to webapp directory
+
+```
+cd /var/lib/tomcat8/webapps/ROOT/WEB-INF/classes  && cat application.properties
+```
+
+21. To test for connectivity. Install telnet
+
+```
+sudo apt install telnet
+```

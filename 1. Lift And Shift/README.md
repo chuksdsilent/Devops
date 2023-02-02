@@ -32,19 +32,6 @@ This project moves application that runs on premise to cloud
 - Map ELB Endpoint to website name in whogohost
 - Autoscaling group for ec2 instances
 
-19. Login to Tomcat instance
-    - sudo -i
-    - cd /var/lib/tomcat8/webapp
-    - stop tomcat (systemctl stop tomcat8)
-    - rm -rf ROOT
-    - install aws cli (apt install awscli -y)
-20. Download the artifact from aws s3 bucket
-    - aws s3 ls s3//<bucketname>
-    - aws s3 cp s3://<bucket-name>/file-name.war /tmp/file-name.war
-    - cp /tmp/file-name.war /var/lib/tomcat8/webapps/ROOT.war
-    - systemctl start tomcat8
-    - apt install telnet -y
-    - telnet db01.sam.org 3306
 21. Create a Target Group
 
     - Go to Target Group
