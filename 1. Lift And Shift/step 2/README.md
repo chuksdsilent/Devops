@@ -1,12 +1,27 @@
 ## Create Tomcat EC2 Instance(Ubuntu)
 
 1. login to aws and go to ec2 instance then launch instances
-2. Select t2 micro
-3. Select the exist vprofile-app-sg security group
-4. Copy Tomcat userdata bash script and past in the userdata box
-5. Launch Instance
-6. install jdk in your local system using powershell and choco commands
 
+![ec2 instance](https://user-images.githubusercontent.com/18073289/216616355-da79fdcf-2976-4fcb-aea2-5a4e00e12e48.PNG)
+
+2. Select t2 micro
+
+![Capture13](https://user-images.githubusercontent.com/18073289/216616490-9991a045-7a01-4c92-a1eb-caa86b544fb3.PNG)
+
+3. Select the exist vprofile-app-sg security group
+
+![Capture14](https://user-images.githubusercontent.com/18073289/216616628-c8d9d796-81f0-4ef7-ab9a-6925bd11b70b.PNG)
+
+
+4. Copy Tomcat userdata bash script and past in the userdata box
+
+![Capture15](https://user-images.githubusercontent.com/18073289/216616710-6c66634e-c95f-4c86-8407-743b0d846cb8.PNG)
+
+
+5. Launch Instance
+
+
+6. install jdk in your local system using powershell and choco commands
 ```
 choco install jdk8 -y
 ```
