@@ -62,17 +62,42 @@ choco install awscli -y
 
 ### Create IAM user
 
-11. Go to users
-12. Add user
-13. Type the name(vprofile-s3-admin) and select programmatic access
-14. Attach to existing policies and Select s3 bucket full access
-15. Preview and create
-16. Go to the user and open it
-17. Go to security credentials
-18. Go to Access Key and create new key
-19. Select Command Line interface and next
-20. Type description and create new Key
-21. Go to your local system and add the access keys
+11. Go to users >>  Add user
+
+![Capture16](https://user-images.githubusercontent.com/18073289/216618417-2188a0d5-73f4-44ec-a686-0559fa60d5a8.PNG)
+
+12. Type the name(vprofile-s3-admin) and select programmatic access
+
+![Capture17](https://user-images.githubusercontent.com/18073289/216619249-4212215d-4ad7-4df7-883f-13a75993e3cd.PNG)
+
+13. Attach to existing policies and Select s3 bucket full access
+
+![Capture18](https://user-images.githubusercontent.com/18073289/216619402-a55794e1-318c-4222-8f9a-7b98330750c7.PNG)
+
+14. Preview and create
+
+### To create an acccess key credentials for a user
+
+15. Go to the user and open it
+
+![Capture21](https://user-images.githubusercontent.com/18073289/216619933-ef80f6cd-ad5e-42ec-8afd-99b0506bdfcb.PNG)
+
+16. Go to security credentials
+
+![Capture21](https://user-images.githubusercontent.com/18073289/216620369-ac446570-3c98-4e4f-9ca9-ede970a9dec7.PNG)
+
+17. Go to Access Key and create new key
+
+![Capture22](https://user-images.githubusercontent.com/18073289/216620529-0f09c222-9422-41c9-9dfd-f21beb83da2c.PNG)
+
+18. Select Command Line interface and next
+
+19. Type description and create new Key
+
+![Capture23](https://user-images.githubusercontent.com/18073289/216620778-caf02a72-c4a5-4540-9f27-e77527f05770.PNG)
+
+
+20. Go to your local system and add the access keys
 
 ```
 aws configure
