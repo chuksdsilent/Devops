@@ -16,5 +16,5 @@
  ![Capture11](https://user-images.githubusercontent.com/18073289/216613849-7e1e3b50-7cbf-4876-920e-1ac2759843ab.PNG)
  <br />
  2. Type the sub domain (db01, mc01,bmq01) - Enter ip address of the corresponding ec2 instance
-  ![Capture10](https://user-images.githubusercontent.com/18073289/216614146-33d013b3-0397-47d0-97a6-3c7324a0d79d.PNG)
- ![Capture11](https://user-images.githubusercontent.com/18073289/216614208-2cc1a60c-579b-445a-aafa-f4fabac2b92f.PNG)
+![Capture10](https://user-images.githubusercontent.com/18073289/216615258-3a062e3b-3df9-4375-b49d-558a7df82d5a.PNG)
+![Capture11](https://user-images.githubusercontent.com/18073289/216615274-a3663e0a-b868-40bd-b3dd-d4cd5af09471.PNG)
