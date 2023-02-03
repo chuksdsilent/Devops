@@ -155,9 +155,6 @@ aws s3 ls s3://bucket-name
 6. select the role and update
 
 
-![Capture30](https://user-images.githubusercontent.com/18073289/216623324-3c63f94e-3be4-4391-b5a4-4f54bd7d99e6.PNG)
-
-
 7. Login to app01
 
 8. To check tomcat status
