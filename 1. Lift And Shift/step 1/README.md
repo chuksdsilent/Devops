@@ -10,7 +10,7 @@
 
 ## To create records
 
-## Create Simple Records
+### Create Simple Records
  1. Select simple routing
  
  ![Capture11](https://user-images.githubusercontent.com/18073289/216613849-7e1e3b50-7cbf-4876-920e-1ac2759843ab.PNG)
