@@ -92,7 +92,7 @@ choco install awscli -y
 
 18. Select Command Line interface and next
 
-19. Type description and create new Key
+19. Type description and create access Key
 
 ![Capture23](https://user-images.githubusercontent.com/18073289/216620778-caf02a72-c4a5-4540-9f27-e77527f05770.PNG)
 
@@ -131,70 +131,90 @@ aws s3 ls s3://bucket-name
 
 ### To create a role
 
-1. Go to IAM
-2. Go to roles
-3. Create a role , select aws service and select EC2
-4. select s3fullacess
-5. Enter role name and create role
-6. Go to instances and select app01
-7. Go to actions >> instance settings >> modify IAM Role
-8. select the role and update
-9. Login to app01
-   10 To check tomcat status
+1. Go to IAM >> Go to roles >> Next
+
+![Capture25](https://user-images.githubusercontent.com/18073289/216622347-b91877a3-9150-415f-91d1-65bfcec1bdd2.PNG)
+
+2. Create a role , select aws service and select EC2  >> Next
+
+![Capture26](https://user-images.githubusercontent.com/18073289/216622412-87a57e56-abaf-4411-94ee-18bc5a821dc5.PNG)
+
+3. select s3fullacess
+
+![Capture27](https://user-images.githubusercontent.com/18073289/216622842-76f419a8-303c-4282-a6cc-7b8f0c9d7bc8.PNG)
+
+4. Enter role name and create role
+
+![Capture28](https://user-images.githubusercontent.com/18073289/216622893-53e2e1c7-d65b-4602-9168-19fbf901f833.PNG)
+
+5. Go to instances and select app01 >> Go to actions >> instance settings >> modify IAM Role
+
+
+![Capture29](https://user-images.githubusercontent.com/18073289/216622999-a1a2f227-b84d-47bc-9446-3a60f7bc784c.PNG)
+
+6. select the role and update
+
+
+![Capture30](https://user-images.githubusercontent.com/18073289/216623324-3c63f94e-3be4-4391-b5a4-4f54bd7d99e6.PNG)
+
+
+7. Login to app01
+
+8. To check tomcat status
 
 ```
 systemctl status tomcat8
 ```
 
-11. To
+9. To
 
 ```
 cd /var/lib/tomcat8/webapps && ls
 ```
 
-12. Stop tomcat service
+10. Stop tomcat service
 
 ```
 sudo systemctl stop tomcat8
 ```
 
-13. delete the root directory
+11. delete the root directory
 
 ```
 sudo rm -rf ROOT
 ```
 
-14. Install AWS cli
+12. Install AWS cli
 
 ```
 sudo apt install awscli -y
 ```
 
-17. Download the File from s3 to tomcat(app01) server
+13. Download the File from s3 to tomcat(app01) server
 
 ```
 aws s3 cp s3://vprofile-sam-artifact-storage/vprofile-v2.war /tmp
 ```
 
-18. Copy The file to tomcat8
+14. Copy The file to tomcat8
 
 ```
 sudo cp vprofile-v2.war /var/lib/tomcat8/webapps/ROOT.war
 ```
 
-19. Start the tomcat service
+15. Start the tomcat service
 
 ```
 sudo systemctl start tomcat8
 ```
 
-20 change to webapp directory
+16 change to webapp directory
 
 ```
 cd /var/lib/tomcat8/webapps/ROOT/WEB-INF/classes  && cat application.properties
 ```
 
-21. To test for connectivity. Install telnet
+17. To test for connectivity. Install telnet
 
 ```
 sudo apt install telnet
