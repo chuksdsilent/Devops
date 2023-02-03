@@ -85,7 +85,19 @@ mysql -u root -p and enter then enter password)
 use database-name(accounts);
 ```
 
-18. To view tables
+18. To view databases
+
+```
+show database;
+```
+
+19. To switch to the database
+
+```
+use database-name;
+```
+
+20. To view tables
 
 ```
 show tables;
