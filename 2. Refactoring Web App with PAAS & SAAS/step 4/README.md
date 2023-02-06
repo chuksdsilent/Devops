@@ -33,3 +33,5 @@ git checkout aws-Refractor
 8. cd vprofile-project/src/main/resource
 
 9. import mysql((mysql -h mysql-endpoint -u username -pPassword dbname < db_backup.sql)
+
+Note: you must allow rds to accept traffic from ec2 security group
