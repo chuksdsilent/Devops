@@ -56,67 +56,9 @@ I moved application running virtual machine to aws services.
 14. Create CDN with ssl cert
 15. Update Entry in Whogohost
 
-### STEPS
-
-
-9. Create Elastic Beanstalk
-   - Type Name
-   - Select the platform (tomcat)
-   - select the version(8.5)
-   - select sample application
-   - select configure more option
-   - instances
-     - select the security group
-     - save
-   - Capacity
-     - select load balancer under Env. Type
-     - instances( select min and max)
-     - instance type(t2.micro)
-     - AZ(ANY)
-     - Scaling trigger(Network out is most popular)
-   - Load balancer
-     - select application
-     - save
-   - Deployment
-     - Deployment Policy (Rolling)
-     - Batch Size(50%)
-     - Save
-   - Security
-     - Select key pair
-     - save
-   - Enhance Monitoring
-     - Basic for test, Enhanced for production
-     - Tick Stream the logs
-     - Delete after usage
-     - save
-   - Create App
-10. Update backend security group - Allow traffic from beanstalk security group for each of the security group(mysql, memcache, rabbitmq)
-11. Update the health check
-    - Go to beanstalk >> Environment >> configuration >> Load Balancer
-      - Edit
-      - Add Listener
-      - port(443)
-      - select certificate
-      - save
-      - under health check
-      - select default
-      - add /login
-      - save
-      - apply
-12. Clone vprofile-project
-    - switch to aws refactor(git checkout aws-Refactor)
-    - cd vprofile-project/src/main/resources
-    - vim application.properties
-    - change the properties of db, memcache and rabbitmq
-    - save
-13. Go to Beanstalk
-    - application version
-    - Type in the name
-    - upload the war file
-    - select the version >> action >> deploy
-14. Go to Whogohost
+16. Go to Whogohost
     - create a CNAME record with the beanstalk endpoint
-15. Enable stickness
+17. Enable stickness
     - Go to beanstalk
     - Configuration
     - edit under load balancer
@@ -124,7 +66,7 @@ I moved application running virtual machine to aws services.
     - Edit
     - Select stickness
     - Save
-16. Create CloudFront
+18. Create CloudFront
     - Go to Cloudfront
     - Create Distribution
     - Region(domain name)
