@@ -35,3 +35,7 @@ git checkout aws-Refractor
 9. import mysql((mysql -h mysql-endpoint -u username -pPassword dbname < db_backup.sql)
 
 Note: you must allow rds to accept traffic from ec2 security group
+
+10. Copy credential of each service
+   - db endpoint
+   - Amazon MQ AMQP

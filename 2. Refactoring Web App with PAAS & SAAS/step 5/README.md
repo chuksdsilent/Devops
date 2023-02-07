@@ -21,7 +21,7 @@
 17. select application >> save
 18. Deployment
 19. Deployment Policy (Rolling)
-20. Batch Size(50%) >> Save
+20. Batch Size(50% for 2 instances) >> Save
 21. Security
 22. Select key pair >> save
 23. Enhance Monitoring

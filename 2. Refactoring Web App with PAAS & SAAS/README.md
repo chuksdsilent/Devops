@@ -58,9 +58,7 @@ I moved application running virtual machine to aws services.
 
 ### STEPS
 
-8. Copy credential of each service
-   - db endpoint
-   - Amazon MQ AMQP
+
 9. Create Elastic Beanstalk
    - Type Name
    - Select the platform (tomcat)
