@@ -74,6 +74,10 @@ https://repo1.maven.org/maven2
 
 17. Type the name
 
-18. Under Member repositories move your repo (vpro-maven-central) and maven releases from available to members
+18. Click on Create repository >> maven2(group)
 
-19.
+19. Type the name >> Create
+
+20. Under Member repositories move your repo (vpro-maven-central), maven releases and snapshot from available to members
+
+21. Go to vprofile project >> open .m2 >> open settings.xml
