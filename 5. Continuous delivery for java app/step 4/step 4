@@ -1,0 +1,23 @@
+# Promote Artifact for Production
+
+1. Go to New Item >> type the project-name(deploy-to-nexus-for-prod) >> copy from deploy to nexus >> ok
+
+2. Under build remove copy artifacts from another project
+
+3. Add build step >> invoke top level maven target >> move it above nexus details
+
+4. under goals type install
+
+5. go to build job project >> under top-level maven targets click on advance copy the content
+
+6. paste it inside properties box
+
+7. Add build step >> execute shell >> move it to the top of build
+
+8 Go the build project copy the properties and paste inside the box.
+
+9. change groupid to prod.
+
+10 save
+
+11. configure >> add build step >> deploy war/ear to a container >> type the project name(deploy-to-nexus)
