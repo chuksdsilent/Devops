@@ -100,3 +100,64 @@ show tables;
     - image(3.0)
     - service role(existing >> Go to build projects >> open vprofile build >> edit >> copy the role and paste)
     - Build Specification(Insert build commands(Go to cd-aws branch >> aws files >> open buildAndRelease_buildspec.yml the copy and replace))
+    - CloudWatch group name(vprofile-cicd-logs)
+    - stream name (Build&Release Job)
+
+### Generate latest token
+
+24. Go to repositories
+
+25. Maven Central store
+
+26. View connection instructions
+
+27. Copy the url and paste on gitbash then enter
+
+28. Type the following command
+
+```
+echo $CODEARTIFACT_AUTH_TOKEN
+```
+
+It will generate a token then copy the token.
+
+29. Go to system manager
+
+30. click on code artifact token >>edit >> paste inside the value box >> update
+
+31 create parameter for RDS_ENDPOINT, RDS_USER, RDSPASS
+
+32. Go to s3 bucket >> Create Bucket
+
+    - Bucket Name(vprofile-cicd-testoutput56)
+    - create
+
+33. Go to Build Project >> Create Build Project
+    - project name(software testing)
+    - source provider(aws code commit)
+    - Repository (vprofile-code-repo)
+    - Branch (selenium auto scripts)
+    - Operating system (window server 2019)
+    - Runtime (Base)
+    - image (aws/codebuild/windows-base: 2019)
+    - Existing role
+    - insert build command(Go to cd-aws branch >> aws files >> win_buildspec.yml >> copy and paste)
+    - Artifact type(s3 bucket) >> select the bucket
+    - enable sematic versioning
+    - select zip
+    - use the same log group name
+    - Enter stream name
+    - create project
+
+34 Go to pipeline >> create pipeline
+
+35. Type Name >> new role >> next
+
+36. source
+
+    - source provider(aws codecommit)
+    - branch (cd-aws)
+    - next
+
+37. build
+    - project name(vprofile14-build&release)
