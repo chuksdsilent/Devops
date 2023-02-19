@@ -12,6 +12,7 @@
     - name: sample ec2 key
       ec2_key:
         name: sample
+        region: us-east-1
 ```
 
 3. To Test the playbook
@@ -25,4 +26,7 @@ ansible-playbook test-aws.yml
 ```
 sudo apt search boto
 sudo apt install python3-boto -y
+sudo apt install python3-boto3 -y
+sudo apt install python3-botocore -y
+
 ```
