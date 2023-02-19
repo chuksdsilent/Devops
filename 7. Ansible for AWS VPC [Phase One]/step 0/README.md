@@ -8,13 +8,11 @@
    - key pair
    - SG(port 22 from my ip)
    - type the following code
-     ``
-#!/bin/bash`
-     sudo apt update
-     sudo apt install ansible -y
 
    ```
-
+    #!/bin/bash`
+     sudo apt update
+     sudo apt install ansible -y
    ```
 
 3. login to the ansible server
