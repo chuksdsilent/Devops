@@ -160,4 +160,64 @@ It will generate a token then copy the token.
     - next
 
 37. build
+
     - project name(vprofile14-build&release)
+    - next
+    - deploy provider(Aws Beanstalk)
+    - application name(vprofile-app)
+    - environment name(vprofileapp-env)
+    - next
+    - create pipeline
+
+38. Stop execution >> disable transition
+
+39. Add Stage >> type the stage name(code analysis) >> Add Stage
+
+40. Add Action group
+
+    - type action name (code-analysis)
+    - select action provider(code build)
+    - select input artifact(source artifact)
+    - Project name (vprofile-build) >
+    - Done
+
+41. Add Stage >> type stage name(build&Store) >> Done
+
+42. Add Action group
+
+    - type action name (Build&Store)
+    - select action provider(code build)
+    - select input artifact(source artifact)
+    - Project name (vprofile-build-artifact)
+    - Output Artifact(BuildArtifact)
+    - Done
+
+43. Add Stage >> type stage name(DeploytoS3) >> Done
+
+44. Add Action group
+
+    - type action name (DeploytoS3&Store)
+    - select action provider(Amazon s3)
+    - Bucket(vprofile-artifact-storage)
+    - Done
+
+45. Edit the build stage action change output to build artifact to bean.
+
+46. Edit the deploy stage action change input artifact to build artifact to bean.
+
+47. Add Stage >> type stage name(softwareTesting) >> Done
+
+48. Add Action group
+
+    - type action name (SoftwareTesting)
+    - select action provider(aws codebuild)
+    - select input artifact(source artifact)
+    - Project name (softwareTesting)
+    - Done
+
+49. Go to Pipelines
+
+50. open the pipeline >> Notify >> Manage notification rules >> Create Notification >>
+    - Notification Name(vprofile-aws-cicd-pipeline-notification)
+    - select the notifications you want
+    - configured targets (vprofile-pipeline-notification)
