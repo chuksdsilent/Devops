@@ -30,3 +30,21 @@ sudo apt install python3-boto3 -y
 sudo apt install python3-botocore -y
 
 ```
+
+5. Every ansible play returns a json output to use the output first store the output using register
+
+```
+
+- hosts: localhost
+  connection: local
+  gather_facts: False
+  tasks:
+    - name: sample ec2 key
+      ec2_key:
+        name: sample
+        region: us-east-1
+      register: keyout
+
+    - debug:
+        var: keyout
+```
