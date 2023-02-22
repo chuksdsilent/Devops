@@ -55,5 +55,11 @@ git checkout cd-aws-jenkins
 23. Copy the content and paste on Execute shell then change the project key
 
 24. Under Build
+
     - Settings file (Use default settings)
-25. Save >> Build Now.
+
+25. Under Post-build Actions
+
+    - remove build other projects
+
+26. Save >> Build Now.
