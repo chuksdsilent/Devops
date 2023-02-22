@@ -34,4 +34,17 @@
       - aws access and secret key
     - Use project source code
 
-15.
+15. Under miscellaneous Configuration >> check mark Download Artifact
+
+    - Under relative path leave empty
+
+16. Save
+
+17. Go to SonarCloudCodeAnalysis job >> configure >> Add post-build action >> Build other Project
+
+    - Projects to build(Deploy-to-staging-beanstalkenv) >> save
+
+18. Go to Deploy-to-staging-beanstalkenv job >> configure >> Add post-build action >> Build other Project
+
+
+    - Projects to build(CodeBuild-Software-Testing)
