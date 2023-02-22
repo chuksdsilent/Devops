@@ -35,6 +35,25 @@
 17. branch (\*/cd-aws-jenkins)
 
 18. Under Execute SonarQube Scanner
+
     - SonarQube Installation (sonarHybrid)
     - Analysis Properties (sonar.projectName=vprofile-repoHybrid)
-19.
+    - Add sonar.organization=organization-name from sonarcloud
+
+19. Remove Quality Gate
+
+20. Add build Step >> Execute shell
+
+21. open bash >> move to vprofile-project >> switch to branch cd-aws-jenkins
+
+```
+git checkout cd-aws-jenkins
+```
+
+22. open Jenkins_files/sonarQualityGatesCommand.txt
+
+23. Copy the content and paste on Execute shell then change the project key
+
+24. Under Build
+    - Settings file (Use default settings)
+25. Save >> Build Now.
