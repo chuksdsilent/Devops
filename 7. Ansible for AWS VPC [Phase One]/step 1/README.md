@@ -48,3 +48,27 @@ sudo apt install python3-botocore -y
     - debug:
         var: keyout
 ```
+
+6. To avoid duplicate key add a condition
+
+```
+
+- hosts: localhost
+  connection: local
+  gather_facts: False
+  tasks:
+    - name: sample ec2 key
+      ec2_key:
+        name: sample
+        region: us-east-1
+      register: keyout
+
+    - debug:
+        var: keyout
+
+    - name: store login key
+      copy:
+        content: "{{keyout.key.private_key}}"
+        dest: ./sample-key.pem
+    when: keyout.changed
+```

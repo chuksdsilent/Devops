@@ -15,6 +15,15 @@
      sudo apt install ansible -y
    ```
 
+   or install latest version 2.9.10 or higher
+
+   ```
+   #!/bin/bash`
+    sudo apt update
+    sudo apt install python3-pip -y
+    sudo pip3 install ansible -y
+   ```
+
 3. login to the ansible server
 
 4. search for ansible aws documentation
