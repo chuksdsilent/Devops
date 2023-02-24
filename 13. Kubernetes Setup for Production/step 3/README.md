@@ -112,3 +112,9 @@ kops update cluster --name kubevpro.groophy.in --state=s3://bucket-name --yes
 ```
 kops validate cluster --state=s3://bucket-name
 ```
+
+28. To delete cluster
+
+```
+kops delete cluster --name=kubevpro.groovy.in --state=s3://bucket-name --yes
+```

@@ -41,5 +41,3 @@ git checkout kubernetes-setup
 ```
 vagrant destroy
 ```
-
-7.
