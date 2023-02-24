@@ -38,3 +38,77 @@
     - create
 
 13. Add the values to whogohost
+
+14. Attach the user to the EC2 Instance
+
+15. Login to ec2 instance and generate ssh key
+
+16. Install aws cli
+
+```
+sudo apt update && apt install awscli -y
+
+```
+
+17. configure AWS
+
+```
+aws configure
+```
+
+18. Install kubectl
+
+19. Give the file executable permission
+
+```
+chmod +x ./kubectl
+```
+
+20. move it to /usr/local/bin/
+
+```
+sudo mv kubectl /usr/local/bin/
+```
+
+21. check if kubectl is install
+
+```
+kubectl
+```
+
+22. Install kops
+
+```
+chmod +x ./kops-linux-amd64
+```
+
+23. check if kops is install
+
+```
+kops
+```
+
+24. To run kops and create a cluster
+
+```
+nslookup -type=ns kubevpro.groophy.in
+```
+
+25. To create cluster
+
+```
+kops create cluster --name=kubevpro.groophy.in --state=s3://bucket-name --zones=us-east-2a,us-east-2b --node-count=2 --node-size=t2.micro --master-size=t2.micro --dns-zone=kubevprofile.groophy.in
+
+```
+
+26. Then update the cluster
+
+```
+kops update cluster --name kubevpro.groophy.in --state=s3://bucket-name --yes
+```
+
+27. To validate the cluster
+
+```
+kops validate cluster --state=s3://bucket-name
+```
