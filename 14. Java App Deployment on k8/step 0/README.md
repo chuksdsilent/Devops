@@ -54,7 +54,7 @@ echo -n "password" | base64
 11. To deploy a deployment manifest on a pod
 
 ```
-kubectl create -f app-secret.yaml
+kubectl create/apply -f app-secret.yaml
 ```
 
 12. To see the secret content deployed
@@ -67,4 +67,15 @@ kubectl get secret
 
 ```
 kubectl describe secret secret-name
+```
+
+14. Add Tags on the volume in aws console
+
+    - name(KubernetesCluster), value(cluster-name = vprofile.groovy.in)
+    - Save
+
+15. To delete your definition files
+
+```
+kubectl delete -f .
 ```
