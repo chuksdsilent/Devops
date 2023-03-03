@@ -47,3 +47,9 @@ helm list
 ```
 kubectl get all --namespace test
 ```
+
+11. To delete helm chart
+
+```
+helm delete vprofile-stack --namespace test
+```

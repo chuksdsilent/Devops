@@ -27,3 +27,21 @@ Steps
 5 Type the name >> Next
 
 6. Click on Add Rules >> Managed Rules
+
+7. Add Rules >> Next >> next >> Next >> Create web ACL
+
+8. create a Target group
+
+9. Create an application load balancer
+
+10. Open your WAF rule
+
+11. click on Associated AWS Resources
+
+12. Select Amazon API Gateway >> Add
+
+# AWS Shield
+
+AWS Shield protects the system from DDoS Attack
+
+This is for big organization
