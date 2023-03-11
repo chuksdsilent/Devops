@@ -16,7 +16,7 @@ region: "us-east-2"
 
 # Bastion vars
 bastion_ami: ami-0bafa3699418551cd
-MYIP: 102.89.34.237/32
+MYIP: 102.89.34.126/32
 
 # Zone Names
 zone1: us-east-2a
