@@ -1,4 +1,3 @@
-memcache.yml
 ---
 - name: Install Memcache, Start & enable SVC
   hosts: mcsrvgrp
