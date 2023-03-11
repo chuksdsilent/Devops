@@ -1,27 +1,27 @@
 ---
-- name: Setup Vprofile Bastion Host
+- name: Setup Vprofile Stack
   hosts: localhost
   connection: local
   gather_facts: no
   tasks:
     - name: Import VPC setup Variable
-      include_vars: vars/bastion_setup
+      include_vars: vars/vpc-output_vars
 
-    - name: Import VPC setup Variable
-      include_vars: vars/output_vars
+    - name: Import vprofile setup Variable
+      include_vars: vars/vprostacksetup
 
     - name: Create vprofile ec2 key
       ec2_key:
-        name: vprofile-key
+        name: vprokey
         region: "{{region}}"
-      register: key_out
+      register: vprokey_out
 
-    - name: Save private key into file bastion-key.pem
+    - name: Save private key into file loginkey_vpro.pem
       copy:
-        content: "{{key_out.key.private_key}}"
-        dest: "./bastion-key.pem"
+        content: "{{vprokey_out.key.private_key}}"
+        dest: "./loginkey_vpro.pem"
         mode: 0600
-      when: key_out.changed
+      when: vprokey_out.changed
 
     - name: Create Sec Grp for bastion host
       ec2_group:
